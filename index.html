@@ -5,6 +5,35 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="styles\css\style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script>
+		jQuery(function($) {
+			$(window).scroll(function(){ 
+				if($(window).scrollTop() >100) {
+					$('nav').addClass("navbar-hide");
+					$('.brand').addClass("navbar-hide");
+					$('.menu').addClass("navbar-hide");
+				}else {
+					$('nav').removeClass("navbar-hide");
+					$('.brand').removeClass("navbar-hide");
+					$('.menu').removeClass("navbar-hide");
+				}
+			});
+		});
+
+		jQuery(function($) {
+			$(window).scroll(function(){ 
+				if($(window).scrollTop() >950) {
+					$('.brand').addClass("navbar-hide-dark");
+					$('.menu').addClass("navbar-hide-dark");
+				}else {
+					$('.brand').removeClass("navbar-hide-dark");
+					$('.menu').removeClass("navbar-hide-dark");
+				}
+			});
+		});
+	</script>
 </head>
 <body>
 
@@ -13,9 +42,11 @@
 			<div class="brand">
 				<img src="photos/png/logo.png" alt="">
 			</div>
-			<button class="menu button" onclick="openNav()">
-				<img src="photos/png/flaticon/shapes.png" alt="">
-			</button>
+			<div class="menu">
+				<button class="button" onclick="openNav()">
+					<img src="photos/png/flaticon/shapes.png" alt="">
+				</button>
+			</div>
 		</nav>
 
 		<section id="container">
@@ -37,7 +68,7 @@
 				</span>
 			</div>
 
-			
+
 			<div class="images">
 				<div class="block">
 					<img src="photos\png\flaticon\compass.png" alt="">
@@ -65,7 +96,7 @@
 				</div>
 			</div>
 
-			<div class="info">
+			<div class="description">
 				Quisque sapien est, congue a fermentum sed, eleifend nec nulla. Mauris sagittis varius lacus at semper. In vitae lorem risus. Nulla aliquet orci turpis, eu elementum nunc pretium ut. Suspendisse maximus consectetur mauris ac ultrices. Vivamus nisl tellus, tincidunt facilisis turpis eget, hendrerit scelerisque nisl. Praesent interdum nunc ut risus lacinia pharetra. Praesent tempus suscipit purus.
 			</div>
 
@@ -88,59 +119,85 @@
 			</div>
 		</div>
 		<div class="shadow">
-			
+
 		</div>
 	</section>
-	
-	<!--<section id="tiles">
-		<span class="title"></span>
+
+	<section id="tiles">
+		<span class="title">Finished projects</span>
 		<div class="windows">
-			<div class="window"></div>
-			<div class="window"></div>
+			<a href="#">
+				<div class="window">
+					<img src="photos\overwatch.jpg" alt="">
+					<span class="text">Gaming organizations</span>
+				</div>
+			</a>
+			<a href="#">
+				<div class="window">
+					<img src="photos\restaurant.jpg" alt="">
+					<span class="text">Restaurant</span>
+				</div>
+			</a>
 		</div>
 		<div class="windows">
-			<div class="window"></div>
-			<div class="window"></div>
+			<a href="#">
+				<div class="window">
+					<img src="photos\car.jpg" alt="">
+					<span class="text">Automotive</span>
+				</div>
+			</a>
+			<a href="#">
+				<div class="window">
+					<img src="photos\electronics.jpg" alt="">
+					<span class="text">Electronics</span>
+				</div>
+			</a>
 		</div>
 	</section>
-	
+
 	<section id="responsive-info">
 		<div class="all">
 			<div class="imgTitle">
-				<span class="title"></span>
-				<div class="img"></div>
+				<div class="content">
+					<span class="title">Responsive design</span>
+					<div class="img"><img src="photos\png\flaticon\responsive.png" alt=""></div>
+				</div>
+				<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et nibh a urna convallis suscipit eu sed erat. Curabitur posuere, ex a ultrices malesuada, erat felis blandit erat, et auctor mauris orci vitae elit. Vivamus imperdiet hendrerit libero ut varius.</div>
 			</div>
 			<div class="apple">
-				<div class="iphone"></div>
-				<div class="macbook"></div>
+				<div class="iphone"><img src="photos\iphone.png" alt=""></div>
+				<div class="macbook"><img src="photos\macpiefd.png" alt=""></div>
 			</div>
 		</div>
 		<div class="appleDown">
-			<div class="ipad"></div>
-			<span class="text"></span>
+			<div class="ipad"><img src="photos\ipiefd.png" alt=""></div>
+			<span class="text">Portrait option</span>
 		</div>
 	</section>
-	
+
 	<footer>
 		<div class="links">
-			<span class="title"></span>
-			<ul>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
+			<div class="content">
+				<span class="title">INFORMATION</span>
+				<ul>
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">PORTFOLIO</a></li>
+					<li><a href="#">GALLERY</a></li>
+					<li><a href="#">CONTACT</a></li>
+				</ul>
+			</div>
 			<div class="copyright">
-				<span></span>
-				<div class="brand"></div>
+				<span>Copyright by</span>
+				<div class="brand"><img src="photos/png/logo.png" alt=""></div>
 			</div>
 			<div class="community">
-				<div class="logo"></div>
-				<div class="logo"></div>
-				<div class="logo"></div>
-				<div class="logo"></div>
+				<div class="logo"><a href="#"><img src="photos/png/flaticon/twitter.png" alt=""></a></div>
+				<div class="logo"><a href="#"><img src="photos/png/flaticon/facebook.png" alt=""></a></div>
+				<div class="logo"><a href="#"><img src="photos/png/flaticon/instagram.png" alt=""></a></div>
+				<div class="logo"><a href="#"><img src="photos/png/flaticon/google.png" alt=""></a></div>
 			</div>
 		</div>
-	</footer> -->
+		<span class="adware">Designed by Freepik and distributed by Flaticon</span>
+	</footer>
 </body>
 </html>
