@@ -6,7 +6,49 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #edf3f8 !important;
+}
+.body {
+  background-color: #edf3f8;
+  z-index: 4;
+  transition: all 0.3s ease;
+}
+.sidebar-collapse {
+  margin-right: 300px;
+  transition: all 0.3s ease;
+}
+.responsive-collapse {
+  padding-left: 75px !important;
+  transition: all 0.3s ease;
+}
+.responsive-font-description {
+  font-size: 20px !important;
+  transition: all 0.3s ease;
+}
+.responsive-font {
+  font-size: 25px !important;
+  transition: all 0.3s ease;
+}
+.responsive-img-small {
+  width: 90px !important;
+  margin-left: 10px !important;
+  transition: all 0.3s ease;
+}
+.responsive-title-small {
+  font-size: 25px !important;
+  margin-bottom: 10px !important;
+  transition: all 0.3s ease;
+}
+.info-font-description {
+  font-size: 19px !important;
+  transition: all 0.3s ease;
+}
+.info-font-content {
+  font-size: 16px !important;
+  transition: all 0.3s ease;
+}
+.nav-collapse {
+  width: 84.5% !important;
+  transition: all 0.3s ease;
 }
 .button {
   background: none;
@@ -15,6 +57,24 @@ body {
   cursor: pointer;
   overflow: hidden;
   outline: none;
+}
+#sidebar {
+  position: fixed;
+  height: 100%;
+  width: 300px;
+  right: 0px;
+  z-index: 3;
+  background-color: white;
+}
+#sidebar .windows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+#sidebar .windows .window img {
+  width: 200px;
 }
 header {
   display: flex;
@@ -41,7 +101,7 @@ header nav .brand img {
 header nav .menu {
   margin: 25px 100px;
   height: 30px;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 header nav .menu img {
   width: 30px;
@@ -51,11 +111,11 @@ header nav .navbar-hide {
   background: white;
   padding: 15px;
   border-radius: 5px;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
-header nav .navbar-hide-dark {
+header nav .navbar-hide-trans {
   background-color: transparent;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 header .navbar-hide {
   background-color: transparent;
@@ -65,10 +125,9 @@ header #container {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 980px;
-  width: 100%;
-  background: url(../../photos/bg-container.jpg);
+  background: url(../../photos/bg-container.jpg) no-repeat center center;
   color: #282e33;
+  z-index: 4;
 }
 header #container .content {
   text-align: center;
@@ -86,6 +145,7 @@ header #container .content p {
 }
 header #container .content .arrow {
   margin-top: 50px;
+  margin-bottom: 125px;
 }
 header #container .content .arrow img {
   width: 40px;
@@ -117,6 +177,7 @@ header #container .content .arrow img:active {
   padding: 0 130px 0 130px;
   padding-bottom: 100px;
   z-index: 3;
+  border-radius: 3px;
 }
 #info .all .about {
   display: flex;
@@ -144,13 +205,14 @@ header #container .content .arrow img:active {
   width: auto;
   margin-bottom: 15px;
 }
-#info .all .description {
+#info .all .info-description {
   font-size: 22px;
   color: #6e8190;
   margin-top: 60px;
   text-align: center;
   padding-bottom: 30px;
   border-bottom: 1px solid #dde7f0;
+  transition: all 0.3s ease;
 }
 #info .all .author {
   font-size: 25px;
@@ -179,11 +241,12 @@ header #container .content .arrow img:active {
   font-size: 25px;
   color: #bec7ce;
 }
-#info .all .information .aboutMe .content {
+#info .all .information .aboutMe .info-content {
   padding-right: 150px;
   font-size: 20px;
   color: #6e8190;
   margin-top: 50px;
+  transition: all 0.3s ease;
 }
 #info .all .information .logo img {
   width: 200px;
@@ -210,8 +273,6 @@ header #container .content .arrow img:active {
 #tiles .windows {
   display: flex;
   flex-direction: row;
-  margin-bottom: 30px;
-  margin-top: 35px;
 }
 #tiles .windows .window {
   display: flex;
@@ -227,7 +288,7 @@ header #container .content .arrow img:active {
 #tiles a {
   text-decoration: none;
   color: #282e33;
-  margin: 0 30px 0 30px;
+  margin: 35px 30px 30px 30px;
   transition: all 0.5s ease;
   cursor: pointer;
 }
@@ -240,7 +301,8 @@ header #container .content .arrow img:active {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-left: 230px;
+  padding-left: 230px;
+  transition: all 0.3s ease;
 }
 #responsive-info .all {
   position: relative;
@@ -256,24 +318,28 @@ header #container .content .arrow img:active {
   margin-right: 130px;
   margin-top: 125px;
 }
-#responsive-info .all .imgTitle .description {
+#responsive-info .all .imgTitle .responsive-description {
   font-size: 25px;
   color: #6e8190;
   margin-top: 65px;
+  transition: all 0.3s ease;
 }
-#responsive-info .all .imgTitle .content {
+#responsive-info .all .imgTitle .responsive-content {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
-  font-size: 40px;
+  transition: all 0.3s ease;
 }
-#responsive-info .all .imgTitle .content .title {
+#responsive-info .all .imgTitle .responsive-content .responsive-title {
   margin-bottom: 30px;
+  font-size: 40px;
+  transition: all 0.3s ease;
 }
-#responsive-info .all .imgTitle .content img {
+#responsive-info .all .imgTitle .responsive-content .responsive-img {
   width: 130px;
   margin-left: 30px;
+  transition: all 0.3s ease;
 }
 #responsive-info .all .apple {
   display: flex;
@@ -286,16 +352,18 @@ header #container .content .arrow img:active {
   bottom: 10px;
 }
 #responsive-info .appleDown {
-  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  bottom: 100px;
+  margin-top: 50px;
+  font-size: 40px;
+  transition: all 0.3s ease;
 }
 #responsive-info .appleDown .text {
-  margin-right: 200px;
-  font-size: 40px;
+  margin-right: 180px;
+  margin-left: 120px;
+  text-align: center;
 }
 footer {
   background-color: #232732;
@@ -364,5 +432,5 @@ footer .adware {
   justify-content: center;
   font-size: 10px;
   color: #3c404c;
-  margin-bottom: 5px;
+  padding-bottom: 10px;
 }

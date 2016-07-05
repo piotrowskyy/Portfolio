@@ -25,179 +25,212 @@
 		jQuery(function($) {
 			$(window).scroll(function(){ 
 				if($(window).scrollTop() >950) {
-					$('.brand').addClass("navbar-hide-dark");
-					$('.menu').addClass("navbar-hide-dark");
+					$('.brand').addClass("navbar-hide-trans");
+					$('.menu').addClass("navbar-hide-trans");
 				}else {
-					$('.brand').removeClass("navbar-hide-dark");
-					$('.menu').removeClass("navbar-hide-dark");
+					$('.brand').removeClass("navbar-hide-trans");
+					$('.menu').removeClass("navbar-hide-trans");
 				}
+			});
+		});
+
+
+		jQuery(function($) {
+			$(".btn-click2").click(function() {
+				$('html, body').animate({
+					scrollTop: $("#info").offset().top
+				}, 1000);
+			});
+		});
+
+		jQuery(function($) {
+			$(".btn-click1").click(function() {
+				$('.body').toggleClass("sidebar-collapse");
+				$('#responsive-info').toggleClass("responsive-collapse");
+				$('.appleDown').toggleClass("responsive-font");
+				$('.responsive-img').toggleClass("responsive-img-small");
+				$('.responsive-title').toggleClass("responsive-title-small");
+				$('.responsive-description').toggleClass("responsive-font-description");
+				$('.info-description').toggleClass("info-font-description");
+				$('.info-content').toggleClass("info-font-content");
+				$('nav').toggleClass("nav-collapse");
 			});
 		});
 	</script>
 </head>
 <body>
+	<section id="sidebar">
+		<div class="windows">
+			<div class="window"><img src="photos/png/flaticon/home.png" alt=""></div>
+			<div class="window"><img src="photos/png/flaticon/works.png" alt=""></div>
+			<div class="window"><img src="photos/png/flaticon/gallery.png" alt=""></div>
+			<div class="window"><img src="photos/png/flaticon/contact.png" alt=""></div>
+		</div>
+	</section>
 
-	<header>
-		<nav>
-			<div class="brand">
-				<img src="photos/png/logo.png" alt="">
-			</div>
-			<div class="menu">
-				<button class="button" onclick="openNav()">
-					<img src="photos/png/flaticon/shapes.png" alt="">
-				</button>
-			</div>
-		</nav>
+	<div class="body">
+		<header>
+			<nav>
+				<div class="brand">
+					<img src="photos/png/logo.png" alt="">
+				</div>
+				<div class="menu">
+					<button class="btn-click1 button">
+						<img src="photos/png/flaticon/shapes.png" alt="">
+					</button>
+				</div>
+			</nav>
 
-		<section id="container">
-			<div class="content">
-				<h1>PIE Front Design</h1>
-				<p>Enhance your experience.</p>
-				<button class="arrow button">
-					<img src="photos/png/flaticon/down-arrow.png" alt="">
-				</button>
+			<section id="container">
+				<div class="content">
+					<h1>PIE Front Design</h1>
+					<p>Enhance your experience.</p>
+					<button class="btn-click2 arrow button">
+						<img src="photos/png/flaticon/down-arrow.png" alt="">
+					</button>
+				</div>
+			</section>
+		</header>
+
+		<section id="info">
+			<div class="all">
+				<div class="about">
+					<span>
+						ABOUT <font color="#4caf50">PIEFD</font>
+					</span>
+				</div>
+
+
+				<div class="images">
+					<div class="block">
+						<img src="photos\png\flaticon\compass.png" alt="">
+						<span>
+							Precision
+						</span>
+					</div>
+					<div class="block">
+						<img src="photos\png\flaticon\light-bulb.png" alt="">
+						<span>
+							Ideas
+						</span>
+					</div>
+					<div class="block">
+						<img src="photos\png\flaticon\palette.png" alt="">
+						<span>
+							Colorful
+						</span>
+					</div>
+					<div class="block">
+						<img src="photos\png\flaticon\professor.png" alt="">
+						<span>
+							Experience
+						</span>
+					</div>
+				</div>
+
+				<div class="info-description">
+					Quisque sapien est, congue a fermentum sed, eleifend nec nulla. Mauris sagittis varius lacus at semper. In vitae lorem risus. Nulla aliquet orci turpis, eu elementum nunc pretium ut. Suspendisse maximus consectetur mauris ac ultrices. Vivamus nisl tellus, tincidunt facilisis turpis eget, hendrerit scelerisque nisl. Praesent interdum nunc ut risus lacinia pharetra. Praesent tempus suscipit purus.
+				</div>
+
+				<span class="author">
+					AUTHOR
+				</span>
+				<div class="information">
+					<div class="aboutMe">
+						<div class="title">
+							<span class="name">PiotrowskYY</span>
+							<span class="profession">Designer</span>
+						</div>
+						<div class="info-content">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dapibus posuere posuere. Donec iaculis nibh ipsum, a sagittis arcu egestas dictum. Cras in tortor in purus dignissim sagittis. Etiam fringilla pretium sem a fermentum. Duis a lacinia velit.
+						</div>
+					</div>
+					<div class="logo">
+						<img src="photos\logo.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="shadow">
+
 			</div>
 		</section>
-	</header>
 
-	<section id="info">
-		<div class="all">
-			<div class="about">
-				<span>
-					ABOUT <font color="#4caf50">PIEFD</font>
-				</span>
-			</div>
-
-
-			<div class="images">
-				<div class="block">
-					<img src="photos\png\flaticon\compass.png" alt="">
-					<span>
-						Precision
-					</span>
-				</div>
-				<div class="block">
-					<img src="photos\png\flaticon\light-bulb.png" alt="">
-					<span>
-						Ideas
-					</span>
-				</div>
-				<div class="block">
-					<img src="photos\png\flaticon\palette.png" alt="">
-					<span>
-						Colorful
-					</span>
-				</div>
-				<div class="block">
-					<img src="photos\png\flaticon\professor.png" alt="">
-					<span>
-						Experience
-					</span>
-				</div>
-			</div>
-
-			<div class="description">
-				Quisque sapien est, congue a fermentum sed, eleifend nec nulla. Mauris sagittis varius lacus at semper. In vitae lorem risus. Nulla aliquet orci turpis, eu elementum nunc pretium ut. Suspendisse maximus consectetur mauris ac ultrices. Vivamus nisl tellus, tincidunt facilisis turpis eget, hendrerit scelerisque nisl. Praesent interdum nunc ut risus lacinia pharetra. Praesent tempus suscipit purus.
-			</div>
-
-			<span class="author">
-				AUTHOR
-			</span>
-			<div class="information">
-				<div class="aboutMe">
-					<div class="title">
-						<span class="name">PiotrowskYY</span>
-						<span class="profession">Designer</span>
+		<section id="tiles">
+			<span class="title">Finished projects</span>
+			<div class="windows">
+				<a href="#">
+					<div class="window">
+						<img src="photos\overwatch.jpg" alt="">
+						<span class="text">Gaming organizations</span>
 					</div>
-					<div class="content">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dapibus posuere posuere. Donec iaculis nibh ipsum, a sagittis arcu egestas dictum. Cras in tortor in purus dignissim sagittis. Etiam fringilla pretium sem a fermentum. Duis a lacinia velit.
+				</a>
+				<a href="#">
+					<div class="window">
+						<img src="photos\restaurant.jpg" alt="">
+						<span class="text">Restaurant</span>
 					</div>
+				</a>
+			</div>
+			<div class="windows">
+				<a href="#">
+					<div class="window">
+						<img src="photos\car.jpg" alt="">
+						<span class="text">Automotive</span>
+					</div>
+				</a>
+				<a href="#">
+					<div class="window">
+						<img src="photos\electronics.jpg" alt="">
+						<span class="text">Electronics</span>
+					</div>
+				</a>
+			</div>
+		</section>
+
+		<section id="responsive-info">
+			<div class="all">
+				<div class="imgTitle">
+					<div class="responsive-content">
+						<span class="responsive-title">Responsive design</span>
+						<div class="img"><img class="responsive-img" src="photos\png\flaticon\responsive.png" alt=""></div>
+					</div>
+					<div class="responsive-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et nibh a urna convallis suscipit eu sed erat. Curabitur posuere, ex a ultrices malesuada, erat felis blandit erat, et auctor mauris orci vitae elit. Vivamus imperdiet hendrerit libero ut varius.</div>
 				</div>
-				<div class="logo">
-					<img src="photos\logo.jpg" alt="">
+				<div class="apple">
+					<div class="iphone"><img src="photos\iphone.png" alt=""></div>
+					<div class="macbook"><img src="photos\macpiefd.png" alt=""></div>
 				</div>
 			</div>
-		</div>
-		<div class="shadow">
+			<div class="appleDown">
+				<div class="ipad"><img src="photos\ipiefd.png" alt=""></div>
+				<span class="text">Portrait option</span>
+			</div>
+		</section>
 
-		</div>
-	</section>
-
-	<section id="tiles">
-		<span class="title">Finished projects</span>
-		<div class="windows">
-			<a href="#">
-				<div class="window">
-					<img src="photos\overwatch.jpg" alt="">
-					<span class="text">Gaming organizations</span>
-				</div>
-			</a>
-			<a href="#">
-				<div class="window">
-					<img src="photos\restaurant.jpg" alt="">
-					<span class="text">Restaurant</span>
-				</div>
-			</a>
-		</div>
-		<div class="windows">
-			<a href="#">
-				<div class="window">
-					<img src="photos\car.jpg" alt="">
-					<span class="text">Automotive</span>
-				</div>
-			</a>
-			<a href="#">
-				<div class="window">
-					<img src="photos\electronics.jpg" alt="">
-					<span class="text">Electronics</span>
-				</div>
-			</a>
-		</div>
-	</section>
-
-	<section id="responsive-info">
-		<div class="all">
-			<div class="imgTitle">
+		<footer>
+			<div class="links">
 				<div class="content">
-					<span class="title">Responsive design</span>
-					<div class="img"><img src="photos\png\flaticon\responsive.png" alt=""></div>
+					<span class="title">INFORMATION</span>
+					<ul>
+						<li><a href="#">HOME</a></li>
+						<li><a href="#">PORTFOLIO</a></li>
+						<li><a href="#">GALLERY</a></li>
+						<li><a href="#">CONTACT</a></li>
+					</ul>
 				</div>
-				<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et nibh a urna convallis suscipit eu sed erat. Curabitur posuere, ex a ultrices malesuada, erat felis blandit erat, et auctor mauris orci vitae elit. Vivamus imperdiet hendrerit libero ut varius.</div>
+				<div class="copyright">
+					<span>Copyright by</span>
+					<div class="brand"><img src="photos/png/logo.png" alt=""></div>
+				</div>
+				<div class="community">
+					<div class="logo"><a href="#"><img src="photos/png/flaticon/twitter.png" alt=""></a></div>
+					<div class="logo"><a href="#"><img src="photos/png/flaticon/facebook.png" alt=""></a></div>
+					<div class="logo"><a href="#"><img src="photos/png/flaticon/instagram.png" alt=""></a></div>
+					<div class="logo"><a href="#"><img src="photos/png/flaticon/google.png" alt=""></a></div>
+				</div>
 			</div>
-			<div class="apple">
-				<div class="iphone"><img src="photos\iphone.png" alt=""></div>
-				<div class="macbook"><img src="photos\macpiefd.png" alt=""></div>
-			</div>
-		</div>
-		<div class="appleDown">
-			<div class="ipad"><img src="photos\ipiefd.png" alt=""></div>
-			<span class="text">Portrait option</span>
-		</div>
-	</section>
-
-	<footer>
-		<div class="links">
-			<div class="content">
-				<span class="title">INFORMATION</span>
-				<ul>
-					<li><a href="#">HOME</a></li>
-					<li><a href="#">PORTFOLIO</a></li>
-					<li><a href="#">GALLERY</a></li>
-					<li><a href="#">CONTACT</a></li>
-				</ul>
-			</div>
-			<div class="copyright">
-				<span>Copyright by</span>
-				<div class="brand"><img src="photos/png/logo.png" alt=""></div>
-			</div>
-			<div class="community">
-				<div class="logo"><a href="#"><img src="photos/png/flaticon/twitter.png" alt=""></a></div>
-				<div class="logo"><a href="#"><img src="photos/png/flaticon/facebook.png" alt=""></a></div>
-				<div class="logo"><a href="#"><img src="photos/png/flaticon/instagram.png" alt=""></a></div>
-				<div class="logo"><a href="#"><img src="photos/png/flaticon/google.png" alt=""></a></div>
-			</div>
-		</div>
-		<span class="adware">Designed by Freepik and distributed by Flaticon</span>
-	</footer>
+			<span class="adware">Designed by Freepik and distributed by Flaticon</span>
+		</footer>
+	</div>
 </body>
 </html>
