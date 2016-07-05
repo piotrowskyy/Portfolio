@@ -6,63 +6,10 @@ body {
 	width: 100%;
 	margin: 0;
 	padding: 0;
-}
-
-.body {
 	background-color: #edf3f8;
-	z-index: 4;
-	transition: all 0.3s ease;
 }
 
-// MENU COLLAPSE //
-
-.sidebar-collapse {
-	margin-right: 300px;
-	transition: all 0.3s ease;
-}
-
-.responsive-collapse {
-	padding-left: 75px !important;
-	transition: all 0.3s ease;
-}
-
-.responsive-font-description {
-	font-size: 20px !important;
-	transition: all 0.3s ease;
-}
-
-.responsive-font {
-	font-size: 25px !important;
-	transition: all 0.3s ease;
-}
-
-.responsive-img-small {
-	width: 90px !important;
-	margin-left: 10px !important;
-	transition: all 0.3s ease;
-}
-
-.responsive-title-small {
-	font-size: 25px !important;
-	margin-bottom: 10px !important;
-	transition: all 0.3s ease;
-}
-
-.info-font-description {
-	font-size: 19px !important;
-	transition: all 0.3s ease;
-}
-
-.info-font-content {
-	font-size: 16px !important;
-	transition: all 0.3s ease;
-}
-.nav-collapse {
-	width: 84.5% !important;
-	transition: all 0.3s ease;
-}
-
-// PAGE //
+// GLOBAL VAR //
 
 .button {
 	background: none;
@@ -73,12 +20,13 @@ body {
 	outline: none;
 }
 
+//PAGE//
+
 #sidebar {
 	position: fixed;
 	height: 100%;
 	width: 300px;
 	right: 0px;
-	z-index: 3;
 	background-color: white;
 	
 	.windows {
@@ -111,9 +59,9 @@ header {
 		z-index: 5;
 		transition: all 0.3s ease;
 
-		.brand {
+		.nav-brand {
 			margin: 25px 100px;
-			transition: all 0.5s ease;
+			transition: all 0.3s ease;
 
 			img {
 				width: auto;
@@ -121,7 +69,7 @@ header {
 			}
 		}
 
-		.menu {
+		.nav-menu {
 			margin: 25px 100px;
 			height: 30px;
 			transition: all 0.3s ease;
@@ -155,13 +103,19 @@ header {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background: url(../../photos/bg-container.jpg) no-repeat center center;
 		color: #282e33;
-		z-index: 4;
 
-		
-		.content {
+		.fullscreen {
+			width: 100%;
+			position: absolute;
+			top: -90px;
+			left: 0;
+			z-index: 1;
+		}
+
+		.container-content {
 			text-align: center;
+			z-index: 2;
 			
 			h1 {
 				margin-top: 600px;
@@ -214,8 +168,8 @@ header {
 		margin: 125px 0 25px 0;
 		padding: 0 130px 0 130px;
 		padding-bottom: 100px;
-		z-index: 3;
 		border-radius: 3px;	
+		z-index: 4;
 
 		.about {
 			display: flex;
@@ -307,6 +261,7 @@ header {
 			}
 		}
 	}
+
 	.shadow {
 		position: relative;
 		height: 100px;
@@ -331,19 +286,21 @@ header {
 	.windows {
 		display: flex;
 		flex-direction: row;
+		
 		.window {
 			display: flex;
 			flex-direction: column;
 			text-align: center;
 			background-color: white;
 			border-radius: 3px;
-
+			
 			.text {
 				padding: 30px 0 30px 0;
 				font-size: 25px;
 			}
 		}
 	}
+
 	a {
 		text-decoration: none;
 		color: #282e33;
@@ -364,7 +321,6 @@ header {
 	display: flex;
 	flex-direction: column;
 	padding-left: 230px;
-	transition: all 0.3s ease;
 
 	.all {
 		position: relative;
@@ -385,7 +341,6 @@ header {
 				font-size: 25px;
 				color: #6e8190;
 				margin-top: 65px;
-				transition: all 0.3s ease;
 			}
 
 			.responsive-content {
@@ -393,18 +348,15 @@ header {
 				flex-direction: row;
 				align-items: flex-end;
 				justify-content: space-between;
-				transition: all 0.3s ease;
 
 				.responsive-title {
 					margin-bottom: 30px;
 					font-size: 40px;
-					transition: all 0.3s ease;
 				}
 
 				.responsive-img {
 					width: 130px;
 					margin-left: 30px;
-					transition: all 0.3s ease;
 				}
 			}
 		}
@@ -429,7 +381,6 @@ header {
 		justify-content: space-between;
 		margin-top: 50px;
 		font-size: 40px;
-		transition: all 0.3s ease;
 
 		.text {
 			margin-right: 180px;

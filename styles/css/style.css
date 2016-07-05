@@ -6,49 +6,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-}
-.body {
   background-color: #edf3f8;
-  z-index: 4;
-  transition: all 0.3s ease;
-}
-.sidebar-collapse {
-  margin-right: 300px;
-  transition: all 0.3s ease;
-}
-.responsive-collapse {
-  padding-left: 75px !important;
-  transition: all 0.3s ease;
-}
-.responsive-font-description {
-  font-size: 20px !important;
-  transition: all 0.3s ease;
-}
-.responsive-font {
-  font-size: 25px !important;
-  transition: all 0.3s ease;
-}
-.responsive-img-small {
-  width: 90px !important;
-  margin-left: 10px !important;
-  transition: all 0.3s ease;
-}
-.responsive-title-small {
-  font-size: 25px !important;
-  margin-bottom: 10px !important;
-  transition: all 0.3s ease;
-}
-.info-font-description {
-  font-size: 19px !important;
-  transition: all 0.3s ease;
-}
-.info-font-content {
-  font-size: 16px !important;
-  transition: all 0.3s ease;
-}
-.nav-collapse {
-  width: 84.5% !important;
-  transition: all 0.3s ease;
 }
 .button {
   background: none;
@@ -63,7 +21,6 @@ body {
   height: 100%;
   width: 300px;
   right: 0px;
-  z-index: 3;
   background-color: white;
 }
 #sidebar .windows {
@@ -90,20 +47,20 @@ header nav {
   z-index: 5;
   transition: all 0.3s ease;
 }
-header nav .brand {
+header nav .nav-brand {
   margin: 25px 100px;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
-header nav .brand img {
+header nav .nav-brand img {
   width: auto;
   height: 25px;
 }
-header nav .menu {
+header nav .nav-menu {
   margin: 25px 100px;
   height: 30px;
   transition: all 0.3s ease;
 }
-header nav .menu img {
+header nav .nav-menu img {
   width: 30px;
 }
 header nav .navbar-hide {
@@ -125,40 +82,46 @@ header #container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url(../../photos/bg-container.jpg) no-repeat center center;
   color: #282e33;
-  z-index: 4;
 }
-header #container .content {
+header #container .fullscreen {
+  width: 100%;
+  position: absolute;
+  top: -90px;
+  left: 0;
+  z-index: 1;
+}
+header #container .container-content {
   text-align: center;
+  z-index: 2;
 }
-header #container .content h1 {
+header #container .container-content h1 {
   margin-top: 600px;
   margin-bottom: 0px;
   font-weight: 700;
   font-size: 80px;
 }
-header #container .content p {
+header #container .container-content p {
   margin-top: 0px;
   font-weight: 400;
   font-size: 30px;
 }
-header #container .content .arrow {
+header #container .container-content .arrow {
   margin-top: 50px;
   margin-bottom: 125px;
 }
-header #container .content .arrow img {
+header #container .container-content .arrow img {
   width: 40px;
   height: auto;
   padding: 5px 5px 0 5px;
   border-radius: 30px;
   transition: all 0.3s ease;
 }
-header #container .content .arrow img:hover {
+header #container .container-content .arrow img:hover {
   background-color: rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease;
 }
-header #container .content .arrow img:active {
+header #container .container-content .arrow img:active {
   background-color: #ffffff;
   transition: none;
 }
@@ -176,8 +139,8 @@ header #container .content .arrow img:active {
   margin: 125px 0 25px 0;
   padding: 0 130px 0 130px;
   padding-bottom: 100px;
-  z-index: 3;
   border-radius: 3px;
+  z-index: 4;
 }
 #info .all .about {
   display: flex;
@@ -302,7 +265,6 @@ header #container .content .arrow img:active {
   display: flex;
   flex-direction: column;
   padding-left: 230px;
-  transition: all 0.3s ease;
 }
 #responsive-info .all {
   position: relative;
@@ -322,24 +284,20 @@ header #container .content .arrow img:active {
   font-size: 25px;
   color: #6e8190;
   margin-top: 65px;
-  transition: all 0.3s ease;
 }
 #responsive-info .all .imgTitle .responsive-content {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
-  transition: all 0.3s ease;
 }
 #responsive-info .all .imgTitle .responsive-content .responsive-title {
   margin-bottom: 30px;
   font-size: 40px;
-  transition: all 0.3s ease;
 }
 #responsive-info .all .imgTitle .responsive-content .responsive-img {
   width: 130px;
   margin-left: 30px;
-  transition: all 0.3s ease;
 }
 #responsive-info .all .apple {
   display: flex;
@@ -358,7 +316,6 @@ header #container .content .arrow img:active {
   justify-content: space-between;
   margin-top: 50px;
   font-size: 40px;
-  transition: all 0.3s ease;
 }
 #responsive-info .appleDown .text {
   margin-right: 180px;

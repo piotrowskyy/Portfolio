@@ -7,17 +7,18 @@
 	<link rel="stylesheet" href="styles\css\style.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
 	<script>
 		jQuery(function($) {
 			$(window).scroll(function(){ 
 				if($(window).scrollTop() >100) {
 					$('nav').addClass("navbar-hide");
-					$('.brand').addClass("navbar-hide");
-					$('.menu').addClass("navbar-hide");
+					$('.nav-brand').addClass("navbar-hide");
+					$('.nav-menu').addClass("navbar-hide");
 				}else {
 					$('nav').removeClass("navbar-hide");
-					$('.brand').removeClass("navbar-hide");
-					$('.menu').removeClass("navbar-hide");
+					$('.nav-brand').removeClass("navbar-hide");
+					$('.nav-menu').removeClass("navbar-hide");
 				}
 			});
 		});
@@ -25,67 +26,46 @@
 		jQuery(function($) {
 			$(window).scroll(function(){ 
 				if($(window).scrollTop() >950) {
-					$('.brand').addClass("navbar-hide-trans");
-					$('.menu').addClass("navbar-hide-trans");
+					$('.nav-brand').addClass("navbar-hide-trans");
+					$('.nav-menu').addClass("navbar-hide-trans");
 				}else {
-					$('.brand').removeClass("navbar-hide-trans");
-					$('.menu').removeClass("navbar-hide-trans");
+					$('.nav-brand').removeClass("navbar-hide-trans");
+					$('.nav-menu').removeClass("navbar-hide-trans");
 				}
 			});
 		});
 
 
 		jQuery(function($) {
-			$(".btn-click2").click(function() {
+			$(".container-btn").click(function() {
 				$('html, body').animate({
 					scrollTop: $("#info").offset().top
 				}, 1000);
 			});
 		});
-
-		jQuery(function($) {
-			$(".btn-click1").click(function() {
-				$('.body').toggleClass("sidebar-collapse");
-				$('#responsive-info').toggleClass("responsive-collapse");
-				$('.appleDown').toggleClass("responsive-font");
-				$('.responsive-img').toggleClass("responsive-img-small");
-				$('.responsive-title').toggleClass("responsive-title-small");
-				$('.responsive-description').toggleClass("responsive-font-description");
-				$('.info-description').toggleClass("info-font-description");
-				$('.info-content').toggleClass("info-font-content");
-				$('nav').toggleClass("nav-collapse");
-			});
-		});
 	</script>
 </head>
 <body>
-	<section id="sidebar">
-		<div class="windows">
-			<div class="window"><img src="photos/png/flaticon/home.png" alt=""></div>
-			<div class="window"><img src="photos/png/flaticon/works.png" alt=""></div>
-			<div class="window"><img src="photos/png/flaticon/gallery.png" alt=""></div>
-			<div class="window"><img src="photos/png/flaticon/contact.png" alt=""></div>
-		</div>
-	</section>
+	<header>
+		<nav>
+			<div class="nav-brand">
+				<img src="photos/png/logo.png" alt="">
+			</div>
+			<div class="nav-menu">
+				<button class="btn-click1 button">
+					<img src="photos/png/flaticon/shapes.png" alt="">
+				</button>
+			</div>
+		</nav>
 
-	<div class="body">
-		<header>
-			<nav>
-				<div class="brand">
-					<img src="photos/png/logo.png" alt="">
-				</div>
-				<div class="menu">
-					<button class="btn-click1 button">
-						<img src="photos/png/flaticon/shapes.png" alt="">
-					</button>
-				</div>
-			</nav>
-
-			<section id="container">
-				<div class="content">
+		<section id="container">
+			<video loop muted autoplay poster="photos/bg-container.jpg" class="fullscreen">
+				<source src="videos/norway.mp4" type="video/mp4">
+				</video>
+				<div class="container-content">
 					<h1>PIE Front Design</h1>
 					<p>Enhance your experience.</p>
-					<button class="btn-click2 arrow button">
+					<button class="container-btn arrow button">
 						<img src="photos/png/flaticon/down-arrow.png" alt="">
 					</button>
 				</div>
@@ -232,5 +212,4 @@
 			<span class="adware">Designed by Freepik and distributed by Flaticon</span>
 		</footer>
 	</div>
-</body>
-</html>
+	</html>
