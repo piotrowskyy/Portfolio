@@ -43,10 +43,22 @@
 				}, 1000);
 			});
 		});
+
+
+		jQuery(function($) {
+			$(window).scroll(function(){ 
+				if($(window).scrollTop() >3600) {
+					$('#rotate-image').css({ transform: 'rotate(' + 1.57 + 'rad)' });
+				} else {
+					$('#rotate-image').css({ transform: 'rotate(' + 0 + 'rad)' });
+				}
+			});
+		});
 	</script>
 </head>
 <body>
 	<header>
+
 		<nav>
 			<div class="nav-brand">
 				<img src="photos/png/logo.png" alt="">
@@ -58,7 +70,7 @@
 			</div>
 		</nav>
 
-		<section id="container">
+		<section id="main-container">
 			<video loop muted autoplay poster="photos/bg-container.jpg" class="fullscreen">
 				<source src="videos/norway.mp4" type="video/mp4">
 				</video>
@@ -73,7 +85,7 @@
 		</header>
 
 		<section id="info">
-			<div class="all">
+			<div class="container-info">
 				<div class="about">
 					<span>
 						ABOUT <font color="#4caf50">PIEFD</font>
@@ -168,7 +180,7 @@
 		</section>
 
 		<section id="responsive-info">
-			<div class="all">
+			<div class="container-responsive-info">
 				<div class="imgTitle">
 					<div class="responsive-content">
 						<span class="responsive-title">Responsive design</span>
@@ -176,13 +188,9 @@
 					</div>
 					<div class="responsive-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et nibh a urna convallis suscipit eu sed erat. Curabitur posuere, ex a ultrices malesuada, erat felis blandit erat, et auctor mauris orci vitae elit. Vivamus imperdiet hendrerit libero ut varius.</div>
 				</div>
-				<div class="apple">
-					<div class="iphone"><img src="photos\iphone.png" alt=""></div>
-					<div class="macbook"><img src="photos\macpiefd.png" alt=""></div>
-				</div>
 			</div>
-			<div class="appleDown">
-				<div class="ipad"><img src="photos\ipiefd.png" alt=""></div>
+			<div class="responsive-photo">
+				<div id="rotate-image" class="ipad"><img src="photos\ipiefd.png" alt=""></div>
 				<span class="text">Portrait option</span>
 			</div>
 		</section>

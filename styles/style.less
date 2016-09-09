@@ -99,16 +99,17 @@ header {
 
 	}
 
-	#container {
+	#main-container {
 		display: flex;
-		align-items: center;
+		align-items: flex-end;
 		justify-content: center;
 		color: #282e33;
+		height: 100vh;
+		width: 100%;
 
 		.fullscreen {
 			width: 100%;
 			position: absolute;
-			top: -90px;
 			left: 0;
 			z-index: 1;
 		}
@@ -116,9 +117,9 @@ header {
 		.container-content {
 			text-align: center;
 			z-index: 2;
+			width: 100%;
 			
 			h1 {
-				margin-top: 600px;
 				margin-bottom: 0px;
 				font-weight: 700;
 				font-size: 80px;
@@ -131,7 +132,7 @@ header {
 			}
 			.arrow {
 				margin-top: 50px;
-				margin-bottom: 125px;
+				margin-bottom: 80px;
 
 				img {
 					width: 40px;
@@ -159,10 +160,11 @@ header {
 	align-items: center;
 	flex-direction: column;
 	
-	.all {
+	.container-info {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		justify-content: center;
 		width: 50%;
 		background-color: white;
 		margin: 125px 0 25px 0;
@@ -321,20 +323,20 @@ header {
 	display: flex;
 	flex-direction: column;
 	padding-left: 230px;
+	padding-right: 230px;
 
-	.all {
-		position: relative;
+	.container-responsive-info {
 		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
 		text-align: center;
+		justify-content: center;
 
 		.imgTitle {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			margin-right: 130px;
-			margin-top: 125px;
+			margin-top: 50px;
+			margin-bottom: 50px;
+			width: 60%;
 
 
 			.responsive-description {
@@ -360,31 +362,27 @@ header {
 				}
 			}
 		}
-
-		.apple {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-
-			.iphone {
-				position: relative;
-				left: 40px;
-				bottom: 10px;
-			}
-		}
 	}
 
-	.appleDown {
+	.responsive-photo {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-		margin-top: 50px;
+		padding-top: 150px;
+		margin-bottom: 50px;
 		font-size: 40px;
+		
+		#rotate-image {
+			transition: all 1s ease;
+		}
+
+		img {
+			width: 100%;
+		}
 
 		.text {
-			margin-right: 180px;
-			margin-left: 120px;
+			margin-left: 80px;
 			text-align: center;
 		}
 	}

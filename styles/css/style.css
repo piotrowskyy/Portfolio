@@ -78,50 +78,51 @@ header .navbar-hide {
   background-color: transparent;
   transition: all 0.3s ease;
 }
-header #container {
+header #main-container {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   color: #282e33;
+  height: 100vh;
+  width: 100%;
 }
-header #container .fullscreen {
+header #main-container .fullscreen {
   width: 100%;
   position: absolute;
-  top: -90px;
   left: 0;
   z-index: 1;
 }
-header #container .container-content {
+header #main-container .container-content {
   text-align: center;
   z-index: 2;
+  width: 100%;
 }
-header #container .container-content h1 {
-  margin-top: 600px;
+header #main-container .container-content h1 {
   margin-bottom: 0px;
   font-weight: 700;
   font-size: 80px;
 }
-header #container .container-content p {
+header #main-container .container-content p {
   margin-top: 0px;
   font-weight: 400;
   font-size: 30px;
 }
-header #container .container-content .arrow {
+header #main-container .container-content .arrow {
   margin-top: 50px;
-  margin-bottom: 125px;
+  margin-bottom: 80px;
 }
-header #container .container-content .arrow img {
+header #main-container .container-content .arrow img {
   width: 40px;
   height: auto;
   padding: 5px 5px 0 5px;
   border-radius: 30px;
   transition: all 0.3s ease;
 }
-header #container .container-content .arrow img:hover {
+header #main-container .container-content .arrow img:hover {
   background-color: rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease;
 }
-header #container .container-content .arrow img:active {
+header #main-container .container-content .arrow img:active {
   background-color: #ffffff;
   transition: none;
 }
@@ -130,10 +131,11 @@ header #container .container-content .arrow img:active {
   align-items: center;
   flex-direction: column;
 }
-#info .all {
+#info .container-info {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 50%;
   background-color: white;
   margin: 125px 0 25px 0;
@@ -142,7 +144,7 @@ header #container .container-content .arrow img:active {
   border-radius: 3px;
   z-index: 4;
 }
-#info .all .about {
+#info .container-info .about {
   display: flex;
   justify-content: flex-start;
   width: 100%;
@@ -150,25 +152,25 @@ header #container .container-content .arrow img:active {
   margin-top: 100px;
   margin-bottom: 100px;
 }
-#info .all .images {
+#info .container-info .images {
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
 }
-#info .all .images .block {
+#info .container-info .images .block {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#info .all .images .block span {
+#info .container-info .images .block span {
   font-size: 25px;
 }
-#info .all .images .block img {
+#info .container-info .images .block img {
   width: auto;
   margin-bottom: 15px;
 }
-#info .all .info-description {
+#info .container-info .info-description {
   font-size: 22px;
   color: #6e8190;
   margin-top: 60px;
@@ -177,41 +179,41 @@ header #container .container-content .arrow img:active {
   border-bottom: 1px solid #dde7f0;
   transition: all 0.3s ease;
 }
-#info .all .author {
+#info .container-info .author {
   font-size: 25px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
-#info .all .information {
+#info .container-info .information {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-#info .all .information .aboutMe {
+#info .container-info .information .aboutMe {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-#info .all .information .aboutMe .title {
+#info .container-info .information .aboutMe .title {
   display: flex;
   flex-direction: column;
 }
-#info .all .information .aboutMe .title .name {
+#info .container-info .information .aboutMe .title .name {
   font-size: 30px;
   color: #282e33;
 }
-#info .all .information .aboutMe .title .profession {
+#info .container-info .information .aboutMe .title .profession {
   font-size: 25px;
   color: #bec7ce;
 }
-#info .all .information .aboutMe .info-content {
+#info .container-info .information .aboutMe .info-content {
   padding-right: 150px;
   font-size: 20px;
   color: #6e8190;
   margin-top: 50px;
   transition: all 0.3s ease;
 }
-#info .all .information .logo img {
+#info .container-info .information .logo img {
   width: 200px;
   border-radius: 150px;
 }
@@ -265,61 +267,57 @@ header #container .container-content .arrow img:active {
   display: flex;
   flex-direction: column;
   padding-left: 230px;
+  padding-right: 230px;
 }
-#responsive-info .all {
-  position: relative;
+#responsive-info .container-responsive-info {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   text-align: center;
+  justify-content: center;
 }
-#responsive-info .all .imgTitle {
+#responsive-info .container-responsive-info .imgTitle {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 130px;
-  margin-top: 125px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 60%;
 }
-#responsive-info .all .imgTitle .responsive-description {
+#responsive-info .container-responsive-info .imgTitle .responsive-description {
   font-size: 25px;
   color: #6e8190;
   margin-top: 65px;
 }
-#responsive-info .all .imgTitle .responsive-content {
+#responsive-info .container-responsive-info .imgTitle .responsive-content {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
 }
-#responsive-info .all .imgTitle .responsive-content .responsive-title {
+#responsive-info .container-responsive-info .imgTitle .responsive-content .responsive-title {
   margin-bottom: 30px;
   font-size: 40px;
 }
-#responsive-info .all .imgTitle .responsive-content .responsive-img {
+#responsive-info .container-responsive-info .imgTitle .responsive-content .responsive-img {
   width: 130px;
   margin-left: 30px;
 }
-#responsive-info .all .apple {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-#responsive-info .all .apple .iphone {
-  position: relative;
-  left: 40px;
-  bottom: 10px;
-}
-#responsive-info .appleDown {
+#responsive-info .responsive-photo {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: 50px;
+  padding-top: 150px;
+  margin-bottom: 50px;
   font-size: 40px;
 }
-#responsive-info .appleDown .text {
-  margin-right: 180px;
-  margin-left: 120px;
+#responsive-info .responsive-photo #rotate-image {
+  transition: all 1s ease;
+}
+#responsive-info .responsive-photo img {
+  width: 100%;
+}
+#responsive-info .responsive-photo .text {
+  margin-left: 80px;
   text-align: center;
 }
 footer {
