@@ -49,11 +49,32 @@
 			$(window).scroll(function(){ 
 				if($(window).scrollTop() >3600) {
 					$('#rotate-image').css({ transform: 'rotate(' + 1.57 + 'rad)' });
+					setTimeout(function(){ 
+						$('#image').attr('src', 'photos/ipiefd.png');
+					}, 1000);
 				} else {
 					$('#rotate-image').css({ transform: 'rotate(' + 0 + 'rad)' });
-				}
+					setTimeout(function(){ 
+						$('#image').attr('src', 'photos/ipiefd1.png');
+					}, 1000);
+				};
 			});
 		});
+
+		//czekaj,  hujowo to dzia
+
+			// jakiego opozniena? no 1s
+		// jQuery(function($) {
+		// 	if($('#rotate-image').attr('style', 'transform: rotate(1.57rad)')) {
+		// 		$('#image').attr('src', 'photos/react.png');
+		// 	} else if($('#rotate-image').attr('style', 'transform: rotate(0rad)')){
+		// 		$('#image').attr('src', 'photos/ipiefd.png');
+		// 	}
+		// });
+
+		// sluchaj, Twoja funkcja dziala w taki sposob, ze liczy Ci scrolla dzieki (window).scrollTop() i kiedy osiagnie wartosc 3600, 0rad ma sie zmienic na 1.57rad. i to jest ta ostatnia funkcja, a funkcje animacji, czyli ta ze to sie plynnie obraca, masz w CS
+		//czyli musialbys jakos liczyc ta wartosc rad. I kiedy ona dojedzie do 1.57 to tak
+
 	</script>
 </head>
 <body>
@@ -190,7 +211,7 @@
 				</div>
 			</div>
 			<div class="responsive-photo">
-				<div id="rotate-image" class="ipad"><img src="photos\ipiefd.png" alt=""></div>
+				<div id="rotate-image" class="ipad"><img id="image" src="photos\ipiefd1.png" alt=""></div>
 				<span class="text">Portrait option</span>
 			</div>
 		</section>

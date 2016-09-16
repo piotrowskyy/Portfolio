@@ -16,23 +16,6 @@ body {
   overflow: hidden;
   outline: none;
 }
-#sidebar {
-  position: fixed;
-  height: 100%;
-  width: 300px;
-  right: 0px;
-  background-color: white;
-}
-#sidebar .windows {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  height: 100%;
-}
-#sidebar .windows .window img {
-  width: 200px;
-}
 header {
   display: flex;
   flex-direction: column;
@@ -305,7 +288,7 @@ header #main-container .container-content .arrow img:active {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-top: 150px;
   margin-bottom: 50px;
   font-size: 40px;
